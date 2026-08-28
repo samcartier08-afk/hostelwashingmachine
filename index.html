@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f8fafc">
+  <title>WashMate — Hostel Laundry Scheduler</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar" id="sidebar">
+      <a class="brand" href="#home" aria-label="WashMate home"><span class="brand-mark">🧺</span><span>WashMate</span></a>
+      <p class="eyebrow sidebar-label">Workspace</p>
+      <nav class="main-nav" aria-label="Main navigation">
+        <a href="#home" data-route="home"><span>⌂</span> Home</a>
+        <a href="#machines" data-route="machines"><span>◉</span> Machines</a>
+        <a href="#bookings" data-route="bookings"><span>▣</span> Bookings <b class="nav-count" id="nav-count">0</b></a>
+        <a href="#dashboard" data-route="dashboard"><span>◒</span> Dashboard</a>
+        <a href="#profile" data-route="profile"><span>○</span> Profile</a>
+      </nav>
+      <div class="sidebar-bottom">
+        <a href="#admin" data-route="admin" class="admin-link"><span>✦</span> Admin Demo</a>
+        <div class="sidebar-tip"><span>✨</span><div><strong>Fresh tip</strong><small>Book early for evening slots.</small></div></div>
+        <button class="theme-toggle" id="theme-toggle" type="button"><span>☼</span> Toggle theme</button>
+      </div>
+    </aside>
+
+    <main class="main-content">
+      <header class="topbar">
+        <button class="mobile-menu" id="mobile-menu" aria-label="Open navigation">☰</button>
+        <div class="topbar-context"><span class="live-dot"></span><span id="topbar-hostel">All hostels</span><span class="topbar-divider">/</span><span id="topbar-date"></span></div>
+        <div class="topbar-actions"><button class="icon-button" id="notification-button" aria-label="Notifications">♢<i></i></button><button class="avatar" id="profile-button" aria-label="Open profile">AK</button></div>
+      </header>
+      <div id="app"></div>
+    </main>
+  </div>
+  <div class="toast-region" id="toast-region" aria-live="polite"></div>
+  <div class="modal-backdrop" id="modal-root" hidden></div>
+  <script src="script.js"></script>
+</body>
+</html>
